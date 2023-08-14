@@ -1,0 +1,37 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: weather-server-vane
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+#management:
+ #  info:
+ #     defaults:
+ #       enabled: true
+ #  endpoints:
+  #    web:
+ #       exposure:
+  #         include: "*"
+
+
+management:
+  info:
+    env:
+      enabled: true
+  endpoint:
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info
+info:
+  app:
+    name: weather-service
+    description: Get fast and easy access to the world's most accurate weather, ocean, environment and climate data for every location on earth.
+    version: 1.0.0
